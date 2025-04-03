@@ -30,35 +30,32 @@ class ControlAfficherMarcheTest {
 
 	@Test
 	void testDonnerInfosMarche() {
-		fail("Not yet implemented");
-		/*String[] infos = controlafficher.donnerInfosMarche();
-		//assertEquals(infos, null);
-		Gaulois asterix = new Gaulois("asterix", 5);
+		String[] infos = controlafficher.donnerInfosMarche();
+		assertEquals(infos.length, 0);
+		Gaulois asterix = new Gaulois("Asterix", 5);
 		Gaulois bonemine = new Gaulois("Bonemine", 3);
 		Gaulois obelix = new Gaulois("Obelix",20);
 		village.ajouterHabitant(obelix);
 		village.ajouterHabitant(asterix);
 		village.installerVendeur(asterix, "casque", 2);
-		int i = 0;
-
-		assertNotNull(infos[i]);
-		i++;
-		assertNotNull(infos[i]);
-		i++;
-		assertNotNull(infos[i]);
+		infos = controlafficher.donnerInfosMarche();
+		assertEquals(infos.length, 3);
+		for(int i=0;i<infos.length;i=i+3) {
+			assertEquals(infos[i], "Asterix");
+			assertEquals(infos[i+1], "2");
+			assertEquals(infos[i+2], "casque");
+		}
+		
 		village.ajouterHabitant(bonemine);
 		village.installerVendeur(bonemine, "fleur", 10);
 		village.installerVendeur(obelix, "sanglier", 2);
-		for(i=0;i<3;i++) {
+		infos = controlafficher.donnerInfosMarche();
+		assertEquals(infos.length, 9);
+		for(int i=0;i<infos.length;i+=3) {
 			assertNotNull(infos[i]);
-			i++;
-			assertNotNull(infos[i]);
-			i++;
-			assertNotNull(infos[i]);
-			i++;
-		}*/
-		
-		
+			assertNotNull(infos[i+1]);
+			assertNotNull(infos[i+2]);
+		}
 	}
 
 }

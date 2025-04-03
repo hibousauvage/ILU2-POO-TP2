@@ -10,7 +10,7 @@ import personnages.Chef;
 import personnages.Gaulois;
 import villagegaulois.Village;
 
-class ControlLibererEtalTest {
+class ControlLibererEtalTest { 
 	
 	private Village village;
 
